@@ -1,4 +1,4 @@
-package cn.yuc.scala.common
+package cn.yuc.common.scala
 
 import scala.annotation.tailrec
 

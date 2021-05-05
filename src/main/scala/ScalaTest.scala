@@ -1,5 +1,5 @@
-package cn.yuc.scala.common
-import cn.yuc.scala.common.StringImplicitClasses._
+package cn.yuc.common.scala
+import StringImplicitClasses._
 
 object ScalaTest {
 
