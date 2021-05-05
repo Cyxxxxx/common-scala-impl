@@ -1,33 +1,29 @@
 # common-scala-impl
+Scala implementation modeled Apache common
 
-## 介绍
-参考Apache common包的Scala实现
-
-## 使用说明
-### StringUtils
-#### Scala
-在Scala中，common-scala-impl通过隐式转换的方式提供String对象的增强方法
-在代码中，通过
+## StringUtils
+### Scala
+In Scala，common-scala-impl provides utils function for String through implicit
 ```scala
 import cn.yuc.scala.common.StringImplicitClasses._
 ```
-即可为字符串`String`或字符串数组`Array[String]`类型提供StringUtils中的增强方法，如：
+After you import the implicit class, you can use the utils function on `String` or `Array[String]` object, for example:
 ```scala
 import cn.yuc.scala.common.StringImplicitClasses._
 "   ".isBlank
 "123".isNumeric
 Array(" ","123","abc").isAnyBlank
 ```
-等等...
+etc...
 
-你也可以像在Java代码中使用Apache common一般使用common-scala-impl：
+You can also use common-scala-impl in Scala like use Apache common in Java code
 ```scala
 import cn.yuc.scala.common.StringUtils
 StringUtils.isBlank("  ")
 StringUtils.isNumeric("123")
 ```
-#### Java
-在Java中，通过`import cn.yuc.scala.common.StringUtils`调用其中的静态方法即可
+### Java
+In Java, use common-scala-impl like Apache common:
 ```java
 import cn.yuc.scala.common.StringUtils;
 class Test {
