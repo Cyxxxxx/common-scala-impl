@@ -1,0 +1,7 @@
+.idea
+.bsp
+project
+target
+*.iml
+*.class
+*.log
