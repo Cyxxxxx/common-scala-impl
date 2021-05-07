@@ -2,7 +2,6 @@ package cn.yuc.common;
 
 import cn.yuc.common.entity.Bean1;
 import cn.yuc.common.entity.Bean2;
-import cn.yuc.common.entity.Bean3;
 import cn.yuc.common.japi.BeanUtils;
 
 public class JavaTest {
