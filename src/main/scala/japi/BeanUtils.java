@@ -21,4 +21,13 @@ public class BeanUtils {
         return cn.yuc.common.BeanUtils.transform(bean,ClassTag$.MODULE$.apply(clazz));
     }
 
+    /**
+     * this.copyProperties(source,target) <==> org.springframework.beans.BeanUtils.copyProperties(source,target)
+     * @param source source bean you want to copy properties from
+     * @param target target bean you want to copy properties to
+     */
+    public static void copyProperties(Object source,Object target){
+        cn.yuc.common.BeanUtils.copyProperties(source,target);
+    }
+
 }
