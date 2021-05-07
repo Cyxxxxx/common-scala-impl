@@ -1,6 +1,7 @@
 package cn.yuc.common
 
 import java.lang.reflect.Field
+import BeanUtils.RichBean
 
 /**
  * 用于操作Class对象的Utils，提供一些对Class对象的操作
@@ -49,7 +50,8 @@ object ClassUtils {
    */
   def getCommonFieldsNameSet(fields1: Array[Field], fields2: Array[Field]): Set[String] = {
     // null check
-    assert(fields1 != null && fields2 != null, "param contains null")
+    Asserts.notNull(fields1,"fields1 must not be null!")
+    Asserts.notNull(fields2,"fields2 must not be null!")
     assert(ArrayUtils.noneNull(fields1) && ArrayUtils.noneNull(fields2), "array param contains null")
     (fields1.map(f => (f.getName, f.getType)).toSet & fields2.map(f => (f.getName, f.getType)).toSet).map(_._1)
   }

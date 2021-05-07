@@ -33,6 +33,9 @@ object BeanUtils {
    * @param target target bean you want to copy properties to
    */
   def copyProperties(source: Object, target: Object): Unit = {
+    // null check
+    Asserts.notNull(source,"source must not be null!")
+    Asserts.notNull(target,"target must not be null!")
     val (_, targetClazzFields, commonFieldsName) = ClassUtils.getCommonFields(source.getClass, target.getClass)
     for (field <- targetClazzFields if commonFieldsName.contains(field.getName)) {
       field.setAccessible(true)
@@ -95,7 +98,6 @@ object BeanUtils {
      */
     def to[T: ClassTag]: T = {
       val targetClazz = classTag[T].runtimeClass
-      val beanClazz = bean.getClass
       val targetObject = newTargetInstance(targetClazz).asInstanceOf[Object]
       // 为新对象赋值
       BeanUtils.copyProperties(bean, targetObject)
