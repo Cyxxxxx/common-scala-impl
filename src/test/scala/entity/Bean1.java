@@ -52,4 +52,13 @@ public class Bean1 {
 
     private boolean b;
 
+    public Bean1 getB1() {
+        return b1;
+    }
+
+    public void setB1(Bean1 b1) {
+        this.b1 = b1;
+    }
+
+    private Bean1 b1;
 }
