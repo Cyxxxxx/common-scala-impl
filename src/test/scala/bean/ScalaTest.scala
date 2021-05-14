@@ -17,3 +17,8 @@ object ScalaTest {
     println(s"i: ${newObj3.i}, s: ${newObj3.s}") // i: 5, s: 6
   }
 }
+
+case class TestObj1(i:Int,s:String)
+case class TestObj2(i:Int,s:String)
+case class TestObj3(i:Int,s:String)
+case class TestObj4(i:Int,s:String)
