@@ -5,3 +5,7 @@ version := "0.1"
 scalaVersion := "2.11.12"
 
 idePackagePrefix := Some("cn.yuc.common")
+
+libraryDependencies ++= Seq(
+  "org.scala-lang"%"scala-compiler"%scalaVersion.value
+)

@@ -7,10 +7,27 @@ import scala.reflect.runtime.universe
 import scala.reflect.runtime.universe._
 import scala.tools.reflect.ToolBox
 
+/**
+ * 增强Scala的预定义对象
+ * to enhance the scala.Predef
+ * @author YuC
+ */
 object PredefEnhancer {
 
   val START_INDEX = 0
-
+  val toolbox: ToolBox[universe.type] = runtimeMirror(AnyRef.getClass.getClassLoader).mkToolBox()
+  /**
+   * 包装类似JavaScript或Python的eval函数
+   * use function 'eval(string)' like Python or JavaScript
+   * @param code String type scala code
+   * @return if code is a expression, return a result
+   *         if it's a anonymous function, return a function
+   * @see src\test\scala\eval\Test.scala
+   */
+  def eval(code: String): Any = {
+    val tree = toolbox.parse(code)
+    toolbox.eval(tree)
+  }
 
 
   implicit def enhance(predef: Predef.type): PredefEnhancer.type = this
