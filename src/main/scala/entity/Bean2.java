@@ -42,15 +42,15 @@ public class Bean2 {
 
     private boolean b;
 
-    public Bean1 getB1() {
-        return b1;
+    public Bean1 getBean1() {
+        return bean1;
     }
 
-    public void setB1(Bean1 b1) {
-        this.b1 = b1;
+    public void setBean1(Bean1 bean1) {
+        this.bean1 = bean1;
     }
 
-    private Bean1 b1;
+    private Bean1 bean1;
 
     @Override
     public String toString() {
@@ -59,7 +59,7 @@ public class Bean2 {
                 ", idx=" + idx +
                 ", str='" + str + '\'' +
                 ", b=" + b +
-                ", b1=" + b1 +
+                ", bean1=" + bean1 +
                 '}';
     }
 }
