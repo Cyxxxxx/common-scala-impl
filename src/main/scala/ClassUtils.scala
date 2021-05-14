@@ -1,7 +1,6 @@
 package cn.yuc.common
 
 import java.lang.reflect.Field
-import BeanUtils.RichBean
 
 /**
  * 用于操作Class对象的Utils，提供一些对Class对象的操作
